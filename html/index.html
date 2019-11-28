@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>雷音剧团</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery.i18n.properties.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+</head>
+<body>
+    <header class="header flex">
+        <div class="leftPart">
+            <a href="index.html" data-i18n-text="thundertroupe"></a>
+        </div>
+        <div class="rightPart">
+            <a href="html/show.html" data-i18n-text="signUp"></a>
+            <span>|</span>
+            <a href="html/invite.html" data-i18n-text="volunteer"></a>
+            <span>|</span>
+            <a class="en" onclick="choseLan('en')">English</a>
+            <a class="cn" onclick="choseLan('zh')">中文</a>
+        </div>
+    </header>
+    <section class="mid flex">
+        <div class="introduce">
+            <p class="title enFont" ><span data-i18n-text="troupeIntro" class="titleContent"></span> <span data-i18n-text="troupeIntroExtra" class="extra"></span></p>
+            <div class="flex">
+                <img src="src/intro.jpg"/>
+                <div class="intro">
+                    <div class="top">
+                        <p class="sTitle" data-i18n-text="thundertroupe"></p>
+                        <p data-i18n-text="intro"></p>
+                    </div>
+                    <a href="html/introduce.html" data-i18n-text="viewIntro"></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p class="title enFont" ><span data-i18n-text="programesIntro" class="titleContent"></span><span data-i18n-text="programesIntronExtra" class="extra"></span></p>
+            <div class="contentBox">
+                <div class="contentItem flex" onclick="jump(1)">
+                    <img src="src/play1.jpg"/>
+                    <div class="contentIntro">
+                        <div class="titleTop"></div>
+                        <p data-i18n-text="drama1"></p>
+                        <span class="titleEng enFont" data-i18n-text="drama1Title">Oteru's Lamp</span>
+                        <p class="intro" data-i18n-text="drama1Content"></p>
+                    </div>
+                </div>
+                <div class="contentItem flex" onclick="jump(2)">
+                    <img src="src/play2.jpg"/>
+                    <div class="contentIntro">
+                        <div class="titleTop"></div>
+                        <p data-i18n-text="drama2"></p>
+                        <span class="titleEng enFont" data-i18n-text="drama2Title">The Return of the Poor Son</span>
+                        <p class="intro" data-i18n-text="drama2Content"></p>
+                    </div>
+                </div>
+                <div class="contentItem flex" onclick="jump(3)">
+                    <img src="src/play3.jpg"/>
+                    <div class="contentIntro">
+                        <div class="titleTop"></div>
+                        <p data-i18n-text="drama3"></p>
+                        <span class="titleEng enFont" data-i18n-text="drama3Title">The Barber</span>
+                        <p class="intro" data-i18n-text="drama3Content"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer flex enFont">
+        <p><span data-i18n-text="contact"></span>  |  <span class="enFont">thundertroupe@gmail.com</span></p>
+        <p><span class="enFont">Copyright</span>  ©<span data-i18n-text="thundertroupe"></span></p>
+    </footer>
+</body>
+</html>

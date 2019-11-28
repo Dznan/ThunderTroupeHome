@@ -1,0 +1,200 @@
+.red{
+    color: #FF0000;
+}
+.address i{
+    min-width: 30px;
+}
+.time i{
+    display: block;
+    background: url("../src/clock.png")  no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.address i{
+    display: block;
+    background: url("../src/address.png")  no-repeat;
+    width: 22px;
+    height: 28px;
+}
+.contact i{
+    display: block;
+    background: url("../src/phone.png")  no-repeat;
+    width: 26px;
+    height: 23px;
+}
+
+.mid .introContent .showItem{
+    width: 100%;
+    padding: 0 25%;
+    align-self: center;
+    margin-top: 4rem;
+}
+.mid .introContent .showItem .showTitle{
+    text-align: left;
+    color: #444444;
+    font-size: 1.3rem;
+    padding: 0 2rem;
+}
+.mid .introContent .showItem .showTitle span{
+    color: #D7D7D7;
+    font-size: 1rem;
+}
+.mid .introContent .showItem .ItemIntro {
+    border: solid 1px #ECECEC;
+    padding: 1rem 2rem;
+}
+.mid .introContent .showItem .ItemIntro button{
+    width: 10rem;
+    min-width: 10rem;
+    height: 4rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.mid .introContent .showItem .ItemIntro .btnGroup{
+    align-items: center;
+    justify-content: center;
+}
+.mid .introContent .showItem .ItemIntro .active{
+    background: #FACF3C;
+    color: #444;
+}
+.mid .introContent .showItem .ItemIntro .unActive{
+    color: #FEFEFE;
+    background: #4A4C53;
+    display: none;
+}
+
+
+.mid .introContent .showItem .ItemIntro .intro .introItem{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mid .introContent .showItem .ItemIntro .intro .introItem p{
+    text-align: left;
+    color: #444;
+    margin: 10px 0;
+    padding: 0 1rem;
+}
+.mid .introContent .showItem .ItemIntro .intro .time p{
+    font-size: 1.5rem;
+}
+.mid .introContent .showItem .ItemIntro .intro .address p{
+    font-size: 1rem;
+}
+.mid .introContent .showItem .ItemIntro .intro .contact p{
+    font-size: 1rem;
+}
+
+.mid .coverBox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+.mid .coverBox .center{
+    display: flex;
+}
+.mid .coverBox .center .coverItem{
+    width: 22rem;
+    height: 30rem;
+    background: #fff;
+}
+.mid .coverBox .center .close{
+    background: url("../src/close.png");
+    width: 27px;
+    height: 27px;
+    align-self: flex-start;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.mid .coverBox .center .coverItem .itemTitle{
+    background: #F7F8FB;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: left;
+    padding: 0 1.5rem;
+    color: #444444;
+}
+.mid .coverBox .center .coverItem .itemTitle span{
+    font-size: 1.3rem;
+    line-height: 4rem;
+}
+.mid .coverBox .center .coverItem .ItemContent{
+    text-align: left;
+    padding: 0 1.5rem;
+    margin: 1.2rem 0;
+}
+.mid .coverBox .center .coverItem .ItemContent p{
+    margin: 10px 0;
+    color: #999;
+    padding:  0 0.5rem;
+}
+.mid .coverBox .center .coverItem .ItemContent input{
+    height: 2.5rem;
+    width: 100%;
+    outline: none;
+    padding: 0 1rem;
+}
+.mid .coverBox .center .coverItem .submit{
+    width: 20rem;
+    height: 3rem;
+    background: #FACF3C;
+    margin-top: 2rem;
+    outline: none;
+    border: none;
+    color: #444;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+    .mid .introContent .showItem{
+        padding: 0 1rem;
+        margin-top: 3rem;
+    }
+    .mid .introContent .showItem .ItemIntro{
+        display: block;
+        padding: 1rem;
+    }
+    .mid .introContent .showItem .ItemIntro .intro .introItem p{
+        margin-left: 1rem;
+        padding: 0;
+    }
+    .mid .introContent .showItem .ItemIntro .active{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .mid .introContent .showItem .ItemIntro .unActive{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        left: 50%;
+    }
+    .mid .coverBox .center{
+
+    }
+    .mid .coverBox .center .coverItem{
+        width: 17rem;
+    }
+    .mid .coverBox .center .coverItem .ItemContent{
+        min-height: 5rem;
+    }
+    .mid .coverBox .center .coverItem .submit{
+        margin-top: 1rem;
+        width: 15rem;
+    }
+    .mid .coverBox .center .close{
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        margin-left: 10px;
+    }
+}

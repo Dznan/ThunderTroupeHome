@@ -1,0 +1,174 @@
+.mid .title{
+    text-align: left;
+}
+.mid .title .titleContent{
+    font-size: 1.3rem;
+    color: #444;
+    text-align: left;
+    margin-top: 0;
+}
+.mid .title .extra{
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.mid .introduce {
+    flex: 5;
+    padding: 0 2% 0 5%;
+    height: 100%;
+}
+.mid .content{
+    flex: 3;
+    padding: 0 5% 0 2%;
+    height: 100%;
+}
+
+.mid .introduce img{
+    width: 18rem;
+    height: 25rem;
+    min-width: 18rem;
+    min-height: 25rem;
+}
+.mid .introduce .intro{
+    margin-left: -1px;
+    align-self: flex-start;
+    height: 25rem;
+    min-height: 25rem;
+    flex: 1;
+    text-align: left;
+    padding: 0 1rem;
+    color: #444;
+    /*font-family: "KaiTi";*/
+    border: solid 1px #ECECEC;
+}
+.mid .introduce .intro .sTitle{
+    font-size: 1.4rem;
+}
+.mid .introduce .intro a{
+    text-decoration: underline;
+    margin-top: 1.5rem;
+    display: block;
+}
+.mid .introduce .intro p{
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+.mid .content .contentBox{
+    height: 25rem;
+    width: 100%;
+    /*font-family: "KaiTi";*/
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+}
+.mid .content .contentBox .contentItem{
+    /*margin: 1rem 0;*/
+    border: solid 1px #ECECEC;
+    padding: 1rem;
+    /*margin-bottom: 1rem;*/
+    width: 100%;
+    flex: 1;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.mid .content .contentBox .contentItem:last-child{
+    margin-bottom: 0;
+}
+
+.mid .content .contentBox .contentItem:hover{
+    background: #f5f5f5;
+}
+.mid .content .contentBox .contentItem img{
+    width: 8.35rem;
+    height: 6rem;
+}
+.mid .content .contentBox .contentItem .contentIntro{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 0 1rem;
+    color: #333333;
+    word-break: break-all;
+    text-align: left;
+}
+.mid .content .contentBox .contentItem .contentIntro .titleTop{
+    width: 30px;
+    height: 2px;
+    background: #FF0000;
+    margin-left: 0.2rem;
+}
+.mid .content .contentBox .contentItem:hover .contentIntro .titleTop{
+    display: none;
+}
+
+.mid .content .contentBox .contentItem .contentIntro p{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.mid .content .contentBox .contentItem .contentIntro span{
+    font-size: 0.9rem;
+}
+.mid .content .contentBox .contentItem:hover .contentIntro span{
+    display: none;
+}
+
+.mid .content .contentBox .contentItem .contentIntro .intro{
+    font-size: 0.8rem;
+    display: none;
+}
+.mid .content .contentBox .contentItem:hover .contentIntro .intro{
+    display: block;
+}
+
+
+@media only screen and (min-width: 1920px){
+    .mid .introduce img{
+        width: 28.8rem;
+        height: 40rem;
+        min-width: 28.8rem;
+        min-height: 40rem;
+    }
+    .mid .introduce .intro{
+        height: 40rem;
+    }
+    .mid .content .contentBox{
+        height: 40rem;
+    }
+    .mid .content .contentBox .contentItem img{
+        width: 12.52rem;
+        height: 9rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    .mid{
+        display: block;
+    }
+    .mid .introduce{
+        padding: 1rem 0;
+    }
+    .mid  .title{
+        font-size: 1.2rem;
+    }
+    .mid .introduce .flex{
+        display: block;
+    }
+    .mid .content{
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    .mid .content .contentBox{
+        height: auto;
+    }
+    .mid .introduce img{
+        width: 100%;
+        height:auto;
+        min-width: 100%;
+    }
+    .mid .content .contentBox .contentItem{
+        margin-bottom: 1rem;
+    }
+}

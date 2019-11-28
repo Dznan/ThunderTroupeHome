@@ -1,0 +1,10 @@
+#mongo
+  mongod --fork --logpath /var/log/mongodb.log --logappend
+
+#nginx
+  ./opt/nginx/sbin/ningx
+
+#server
+  pm2 list
+  #find server ID
+  pm2 start 'ID'

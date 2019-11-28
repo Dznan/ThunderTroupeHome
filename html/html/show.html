@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>演出时间</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.i18n.properties.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/introduce.css">
+    <link rel="stylesheet" href="../css/show.css">
+</head>
+<body>
+<header class="header flex">
+    <div class="leftPart">
+        <a href="../index.html" data-i18n-text="thundertroupe"></a>
+    </div>
+    <div class="rightPart">
+        <a href="./show.html" data-i18n-text="signUp"></a>
+        <span>|</span>
+        <a href="./invite.html" data-i18n-text="volunteer"></a>
+        <span>|</span>
+        <a class="en" onclick="choseLan('en')">English</a>
+        <a class="cn" onclick="choseLan('zh')">中文</a>
+    </div>
+</header>
+<section class="mid flex">
+    <img class="banner" src="../src/banner3.jpg" />
+
+    <div class="introContent">
+        <p class="title" data-i18n-text="showtime"></p>
+        <div class="titleLine"><span></span></div>
+        <div class="showItem">
+            <p class="showTitle" data-i18n-text="show1"></p>
+            <div class="ItemIntro flex enFont">
+                <div class="intro">
+                    <div class="introItem time">
+                        <i class="far fa-clock"></i>
+                        <p>19:30 10th August</p>
+                    </div>
+                    <div class="introItem address">
+                        <i class="far fa-clock"></i>
+                        <p>Fort Mason Center for Arts & Culture<br>2 Marina Blvd. Southside Theater, Building D 3rd Floor San Francisco, CA 94123</p>
+                    </div>
+                    <div class="introItem contact">
+                        <i class="far fa-clock"></i>
+                        <p>(415)345-7500</p>
+                    </div>
+                </div>
+                <div class="flex btnGroup plays1">
+                    <button class="active" onclick="chose(1)" data-i18n-text="enroll"></button>
+                    <button class="unActive" data-i18n-text="enrolled"></button>
+                </div>
+            </div>
+        </div>
+        <div class="showItem">
+            <p class="showTitle" data-i18n-text="show2"></p>
+            <div class="ItemIntro flex enFont">
+                <div class="intro">
+                    <div class="introItem time">
+                        <i class="far fa-clock"></i>
+                        <p>19:30 14th August</p>
+                    </div>
+                    <div class="introItem address">
+                        <i class="far fa-clock"></i>
+                        <p>Cubberley Community Center<br>4000 Middlefield Rd, Palo Alto, CA 94303</p>
+                    </div>
+                    <div class="introItem contact">
+                        <i class="far fa-clock"></i>
+                        <p>(650)329-2418</p>
+                    </div>
+                </div>
+                <div class="flex btnGroup plays2">
+                    <button class="active" onclick="chose(2)" data-i18n-text="enroll"></button>
+                    <button class="unActive" data-i18n-text="enrolled"></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="showItem">
+            <p class="showTitle" data-i18n-text="show3"></p>
+            <div class="ItemIntro flex enFont">
+                <div class="intro">
+                    <div class="introItem time">
+                        <i class="far fa-clock"></i>
+                        <p>19:30 18th August</p>
+                    </div>
+                    <div class="introItem address">
+                        <i class="far fa-clock"></i>
+                        <p>Jewish Community Center of the East Bay<br>1414 Walnut St, Berkeley, CA 947093</p>
+                    </div>
+                    <div class="introItem contact">
+                        <i class="far fa-clock"></i>
+                        <p>(510) 848-0237</p>
+                    </div>
+                </div>
+                <div class="flex btnGroup plays3">
+                    <button class="active" onclick="chose(3)" data-i18n-text="enroll"></button>
+                    <button class="unActive" data-i18n-text="enrolled"></button>
+                </div>
+            </div>
+        </div>
+        <div class="coverBox">
+            <div class="center">
+                <div class="coverItem">
+                    <div class="itemTitle">
+                        <span class="titleContent"></span>
+                    </div>
+                    <div class="ItemContent">
+                        <p><span data-i18n-text="enrollName"></span> <span class="red">*</span></p>
+                        <input id="signName" type="text"/>
+                    </div>
+                    <div class="ItemContent">
+                        <p><span data-i18n-text="enrollPhone"></span> <span class="red">*</span></p>
+                        <input id="signPhone" type="tel"/>
+                    </div>
+                    <div class="ItemContent">
+                        <p><span data-i18n-text="enrollEmail"></span> <span class="red">*</span></p>
+                        <input id="signMail" type="email"/>
+                    </div>
+                    <button class="submit" onclick="sign()" data-i18n-text="enrollSubmit"></button>
+                </div>
+                <i class="close" onclick="closeBox()"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer flex enFont">
+    <p><span data-i18n-text="contact"></span>  |  <span class="enFont">thundertroupe@gmail.com</span></p>
+    <p><span class="enFont">Copyright</span>  ©<span data-i18n-text="thundertroupe"></span></p>
+</footer>
+</body>
+</html>

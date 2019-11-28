@@ -1,0 +1,183 @@
+html,body{
+    font-family: "STZhongsong", "Microsoft YaHei", "微软雅黑", Helvetica, Tahoma,  "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",  Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/*.enFont{*/
+    /*font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";*/
+/*}*/
+
+*{
+    box-sizing: border-box;
+}
+p,span{
+    word-break: break-word;
+}
+body{
+    background: url("../src/bg.jpg");
+    background-size: cover;
+    overflow: auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media only screen and (min-width: 768px){
+    html,body{
+        height: 100%;
+        min-width: 1100px;
+        min-height: 650px;
+    }
+    body{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mid{
+        height: auto;
+        flex: 1;
+    }
+    .mid .introduce{
+        min-width: 700px;
+    }
+    .mid .content{
+        min-width:420px;
+    }
+}
+
+
+.header{
+    width: 100%;
+    height: 5rem;
+    min-height: 5rem;
+    background: transparent;
+    padding: 0 5%;
+    color: #333;
+    border-bottom: solid 1px #ECECEC;
+}
+a{
+    text-decoration: none;
+    cursor:pointer;
+    color: #333;
+}
+a:link{text-decoration:none; cursor:pointer;}
+a:visited{text-decoration:none; cursor:pointer}
+a:active{text-decoration:none; cursor:pointer}
+a:hover{text-decoration:none; cursor:pointer;color: #2B86F6}
+
+.header .leftPart{
+    font-size: 1.75rem;
+}
+.header .rightPart{
+    font-size: 1.1rem;
+    text-align: right;
+}
+.header .rightPart .lan{
+    margin-left: 10px;
+}
+.header .rightPart .cn{
+    display: none;
+}
+.mid{
+    padding: 3% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mid .introContent{
+    width: 100%;
+}
+
+.mid .introContent .title{
+    color: #333333;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.mid .introContent p{
+    line-height: 1.5;
+    padding: 0 25%;
+}
+.mid .totalIntro p{
+    padding: 0 25%;
+    text-align: left;
+}
+.mid .totalIntro .title{
+    text-align: center;
+}
+.mid .introContent .titleLine{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.mid .introContent .titleLine span{
+    width: 50px;
+    height: 3px;
+    background: #FF0000;
+}
+
+.footer{
+    width: 100%;
+    height: 4rem;
+    min-height: 4rem;
+    background: #1A1A1A;
+    padding: 0 5%;
+    color: #999;
+}
+.footer p{
+    font-size: 14px;
+    /*font-family: "Source Han Sans CN";*/
+}
+.footer a{
+    color: #999;
+}
+@media only screen and (max-width: 768px){
+    body{
+        background: #fff;
+    }
+    .footer p{
+        width: 150px;
+        font-size: 0.7rem;
+    }
+    .header{
+        height: 4rem;
+        min-height: 4rem;
+    }
+    .footer{
+        height: 3rem;
+        min-height: 3rem;
+    }
+    .header .leftPart{
+        font-size: 1.4rem;
+    }
+    .header .rightPart{
+        font-size: 0.8rem;
+    }
+    .header .rightPart select{
+        position: absolute;
+        right: 2px;
+        top: 2px;
+    }
+    .mid .introContent .title{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .mid .introContent p{
+        color: #666;
+        text-align: left;
+        padding: 0 2rem;
+    }
+    .mid .totalIntro p{
+        padding: 0 2rem;
+    }
+
+}

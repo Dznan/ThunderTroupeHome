@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const RegisterSchema = new Schema({
+  username: String,
+  reservation: Array,
+  email: String,
+  phone: String,
+  create: Number
+})
+module.exports =  RegisterSchema

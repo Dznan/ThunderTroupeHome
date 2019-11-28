@@ -1,0 +1,110 @@
+html,body{
+    min-height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.mid{
+    position: relative;
+    overflow: auto;
+    /*height: 100%;*/
+}
+.mid .introContent{
+    height: 100%;
+}
+
+.mid .banner{
+    width: 100%;
+    height: 23.22vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mid .introduce{
+    min-height: 30rem;
+}
+
+#app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+    padding-bottom: 1rem;
+    margin-top: 5rem;
+}
+#app .bTitle{
+    font-size: 2rem;
+    padding: 0;
+}
+
+#app .adminLogin{
+    z-index: 10;
+    background: #fff;
+    padding: 0 3rem;
+    width: 20rem;
+    height: 20rem;
+    border: solid 1px #ddd;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+}
+#app .adminLogin  .title{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+#app .adminLogin .loginItem p{
+    margin: 0.5rem 0;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+#app .adminLogin .loginItem input{
+    width: 100%;
+    height: 2rem;
+    padding: 0 1rem;
+    outline: none;
+    border: solid 1px #ddd;
+}
+#app .adminLogin  button{
+    height: 2rem;
+    width: 100px;
+    margin-top: 2rem;
+    outline: none;
+    background: #FACF3C;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+#app table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#app table p{
+    padding: 0;
+}
+#app table tr th,td{
+    text-align: left;
+    height: 3rem;
+    border: solid 1px #ddd;
+    padding: 0 1rem;
+}
+#app table tr th{
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #5F6366;
+    color: #fff;
+}
+#app table tr td{
+    /*width: 150px;*/
+    color: #333;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+
+#app table tr:nth-child(2n+1) td{
+    background: #F7F8FC;
+}

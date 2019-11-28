@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/load.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/invite.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<header class="header flex"></header>
+<section class="mid">
+    <!--<img class="banner" src="../src/banner1.jpg" />-->
+    <div class="introContent">
+        <div id="app">
+            <div class="adminLogin" v-if="!login">
+                <p class="title">管理员登录</p>
+                <div class="loginItem">
+                    <p>用户名</p>
+                    <input v-model="username" />
+                </div>
+                <div class="loginItem">
+                    <p>密码</p>
+                    <input type="password" v-model="password" />
+                </div>
+                <button @click="loginCtrl">登录</button>
+            </div>
+            <div v-else>
+                <p class="bTitle">志愿者报名列表</p>
+                <table>
+                    <tr>
+                        <th>姓名</th>
+                        <th>联系邮箱</th>
+                        <th>电话</th>
+                        <th>报名时间</th>
+                        <th>职业</th>
+                    </tr>
+                    <tr v-for="item in list">
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.create}}</td>
+                        <td>{{item.work}}</td>
+                    </tr>
+                </table>
+
+                <p class="bTitle">观剧报名列表</p>
+                <table>
+                    <tr>
+                        <th>姓名</th>
+                        <th>联系邮箱</th>
+                        <th>电话</th>
+                        <th>报名时间</th>
+                        <th>报名场次</th>
+                    </tr>
+                    <tr v-for="item in signList">
+                        <td>{{item.username}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.create}}</td>
+                        <td>
+                            <p v-for="reservation in item.reservation">{{reservation}}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer flex"></footer>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      login: false,
+      username: '',
+      password: '',
+      list:[],
+      signList: []
+    },
+    mounted: function(){
+
+    },
+    methods:{
+      sendRequest: function () {
+        var _self= this
+        var url =  "/BackServer/users/query"
+        axios.get(url).then(function (res) {
+          _self.list = []
+          _self.signList = []
+          res.data.data.volunteer.forEach(function (t) {
+            _self.list.push(t)
+          })
+          res.data.data.register.forEach(function (t) {
+            _self.signList.push(t)
+          })
+          _self.list.forEach(function (e) {
+            e.create = new Date(e.create).toLocaleString()
+          })
+          _self.signList.forEach(function (e) {
+            e.create = new Date(e.create).toLocaleString()
+            var reservation = []
+            e.reservation.forEach(function (t) {
+              if(t === 1){
+                reservation.push('第一场')
+              }
+              if(t === 2){
+                reservation.push('第二场')
+              }
+              if(t === 3){
+                reservation.push('第三场')
+              }
+            })
+            e.reservation = reservation
+          })
+          console.log(_self.list)
+        })
+      },
+      loginCtrl: function () {
+        var _self= this
+        var url =  "/BackServer/users/auth?username="+this.username+"&&password="+this.password
+        axios.get(url).then(function (res) {
+          if(res.data.code === 'ok'){
+            _self.login = true
+            _self.sendRequest()
+          }
+          alert(res.data.msg)
+        })
+      }
+    }
+  })
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>剧目介绍</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../js/jquery.i18n.properties.js"></script>
+    <script src="../js/i18n.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/introduce.css">
+</head>
+<body>
+<header class="header flex">
+    <div class="leftPart">
+        <a href="../index.html" data-i18n-text="thundertroupe"></a>
+    </div>
+    <div class="rightPart">
+        <a href="./show.html" data-i18n-text="signUp"></a>
+        <span>|</span>
+        <a href="./invite.html" data-i18n-text="volunteer"></a>
+        <span>|</span>
+        <a class="en" onclick="choseLan('en')">English</a>
+        <a class="cn" onclick="choseLan('zh')">中文</a>
+    </div>
+</header>
+<section class="mid flex">
+    <img class="banner" src="../src/banner5.jpg" />
+
+    <div class="introContent">
+        <p class="title"><span data-i18n-text="drama3TitleInner"></span></p>
+        <div class="titleLine"><span></span></div>
+        <p data-i18n-text="drama3ContentPart1"></p>
+        <p data-i18n-text="drama3ContentPart2"></p>
+        <p data-i18n-text="drama3ContentPart3">/p>
+        <p data-i18n-text="drama3ContentPart4"></p>
+        <div class="imgContain">
+            <img class="play3_1"  src="../src/play3_1.jpg"/>
+            <img class="play3_2"  src="../src/play3_2.jpg"/>
+
+        </div>
+    </div>
+</section>
+<footer class="footer flex enFont">
+    <p><span data-i18n-text="contact"></span>  |  <span class="enFont">thundertroupe@gmail.com</span></p>
+    <p><span class="enFont">Copyright</span>  ©<span data-i18n-text="thundertroupe"></span></p>
+</footer>
+</body>
+</html>

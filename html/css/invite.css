@@ -1,0 +1,174 @@
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.mid{
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    position: relative;
+}
+.mid .banner2{
+    width: 100%;
+    height: 23.22vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mid .centerBox{
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    display: flex;
+    z-index: 10;
+}
+.mid .inputIntro{
+    width: 42rem;
+    height: 30rem;
+    background: #f8f8fb;
+}
+
+.mid .centerBox .inputIntro .title{
+    text-align: right;
+}
+.mid .centerBox .inputIntro .line{
+    justify-content: flex-end;
+}
+.mid .centerBox .inputIntro p{
+    text-align: left;
+    padding: 0 2.2rem;
+    color: #444;
+}
+
+.mid .inputBox{
+    width: 20rem;
+    height: 30rem;
+    background: #fff;
+}
+.mid .centerBox .title{
+    color: #333;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0 2rem;
+}
+.mid .centerBox .line{
+    width: 100%;
+    display: flex;
+    padding: 0 2.2rem;
+    margin-bottom: 2rem;
+}
+.mid .centerBox .lineContent{
+    height: 2px;
+    background: #FF0000;
+    width: 3rem;
+}
+.mid .inputBox .inputItem{
+    text-align: left;
+    padding: 0 2rem;
+}
+.mid .inputBox .inputItem .red{
+    color: #FF0000;
+}
+.mid .inputBox .inputItem p{
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+.mid .inputBox .inputItem input{
+    border: solid 1px #ddd;
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    padding: 0 1rem;
+}
+.mid .inputBox .submit{
+    height: 3rem;
+    width: 10rem;
+    margin-top: 2.5rem;
+    background: #FACF3C;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.mid .inputBox .submit:active{
+    color: #ECECEC;
+}
+@media only screen and (min-width: 1920px){
+    .mid .inputBox{
+        height: 34rem;
+    }
+    .mid .inputIntro{
+        height: 34rem;
+    }
+    .mid .centerBox .title{
+        margin: 3rem 0 1.5rem 0;
+    }
+    .mid .inputBox .submit{
+        margin-top: 1.8rem;
+    }
+    .mid .inputBox .inputItem{
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    body{
+        display: block;
+    }
+    .mid .banner2{
+        display: block;
+        position: relative;
+    }
+    .mid .centerBox{
+        width: 100%;
+    }
+    .mid .centerBox .inputIntro{
+        width: auto;
+    }
+    .mid .centerBox .inputIntro .title{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .mid .centerBox .inputIntro .line{
+        justify-content: center;
+    }
+    .mid{
+        flex: 1;
+        display: block;
+    }
+    .mid .centerBox .inputBox{
+        height: 28rem;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .mid .centerBox{
+        display: block;
+    }
+    .mid .centerBox .line{
+        justify-content: center;
+    }
+    .mid .centerBox .title{
+        text-align: center;
+        font-size: 1.6rem;
+        margin: 1.2rem 0;
+    }
+    .mid .inputBox .inputItem{
+        padding:  0 3rem;
+    }
+    .mid .inputBox .inputItem p{
+        font-size: 0.8rem;
+    }
+    .mid .inputBox .submit{
+        margin-top: 2rem;
+    }
+}
