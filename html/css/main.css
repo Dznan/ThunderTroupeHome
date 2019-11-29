@@ -77,13 +77,19 @@ a:hover{text-decoration:none; cursor:pointer;color: #2B86F6}
     align-items: center;
 }
 .header .leftPart .troupeIcon{
-    height: 10%;
+    height: 3.0rem;
     max-height: 54px;
 }
 .header .leftPart .troupeName{
-    margin-left: 16px;
-    font-size: 1.55rem;
+    margin-left: 1.0rem;
+    font-size: 1.4rem;
     white-space: nowrap;
+}
+.header .leftPart .troupeName:hover{
+    margin-left: 1.0rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    color: #000000;
 }
 .header .rightPart{
     font-size: 1.1rem;
