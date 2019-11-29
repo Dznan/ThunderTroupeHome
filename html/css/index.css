@@ -40,6 +40,7 @@
     color: #444;
     /*font-family: "KaiTi";*/
     border: solid 1px #ECECEC;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .mid .introduce .intro .sTitle{
     font-size: 1.4rem;
@@ -71,6 +72,7 @@
     flex: 1;
     margin-bottom: 5px;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .mid .content .contentBox .contentItem:last-child{
     margin-bottom: 0;

@@ -5,13 +5,13 @@ $(document).ready(function(){
 var submitShow = 1
 
 function submit() {
-  var url =  "/BackServer/users/add"
+  var url = "/BackServer/users/add"
   var reqData={}
   reqData.username= document.getElementById('name').value
   reqData.email = document.getElementById('email').value
   reqData.work = document.getElementById('work').value
   reqData.phone = document.getElementById('phone').value
-  axios.post(url,reqData).then(function (res) {
+  axios.post(url, reqData).then(function (res) {
     if(res.data.code === 'ok'){
       alert($.i18n.prop('signSuccess'))
     }else{
@@ -30,7 +30,7 @@ function sign() {
   if(reqData.username.trim()=== ''||reqData.email.trim()=== ''||reqData.phone.trim()=== ''){
     alert($.i18n.prop('inputNull'))
   }else{
-    axios.post(url,reqData).then(function (res) {
+    axios.post(url, reqData).then(function (res) {
       if(res.data.code){
         alert($.i18n.prop('signSuccess'))
         setLocal(reqData)
@@ -45,18 +45,18 @@ function sign() {
 
 //初始本地存储
 function setLocal(reqData) {
-  window.localStorage.setItem('username',reqData.username)
-  window.localStorage.setItem('email',reqData.email)
-  window.localStorage.setItem('phone',reqData.phone)
+  window.localStorage.setItem('username', reqData.username)
+  window.localStorage.setItem('email', reqData.email)
+  window.localStorage.setItem('phone', reqData.phone)
   switch (submitShow){
     case 1:
-      window.localStorage.setItem('play1',1);
+      window.localStorage.setItem('play1', 1);
       break;
     case 2:
-      window.localStorage.setItem('play2',1);
+      window.localStorage.setItem('play2', 1);
       break;
     case 3:
-      window.localStorage.setItem('play3',1);
+      window.localStorage.setItem('play3', 1);
       break;
     default:
       break;
@@ -66,21 +66,24 @@ function setLocal(reqData) {
 
 //初始化报名状态
 function initData() {
+  window.localStorage.setItem('play1', 1);
+  window.localStorage.setItem('play2', 1);
+  // window.localStorage.setItem('play3', 0);
   var play1 = window.localStorage.getItem('play1')
   var play2 = window.localStorage.getItem('play2')
-  var play3 = window.localStorage.getItem('play3')
+  // var play3 = window.localStorage.getItem('play3')
   if(play1==='1'){
-    $('.plays1').children('.active').css('display','none')
-    $('.plays1').children('.unActive').css('display','block')
+    $('.plays1').children('.active').css('display', 'none')
+    $('.plays1').children('.unActive').css('display', 'block')
   }
   if(play2==='1'){
-    $('.plays2').children('.active').css('display','none')
-    $('.plays2').children('.unActive').css('display','block')
+    $('.plays2').children('.active').css('display', 'none')
+    $('.plays2').children('.unActive').css('display', 'block')
   }
-  if(play3==='1'){
-    $('.plays3').children('.active').css('display','none')
-    $('.plays3').children('.unActive').css('display','block')
-  }
+  // if(play3==='1'){
+  //   $('.plays3').children('.active').css('display', 'none')
+  //   $('.plays3').children('.unActive').css('display', 'block')
+  // }
 }
 
 function jump(id) {
@@ -95,7 +98,7 @@ function jump(id) {
 
 function chose(id) {
   submitShow = id
-  $('.coverBox').css('display','flex')
+  $('.coverBox').css('display', 'flex')
   var username =  window.localStorage.getItem('username')
   var email = window.localStorage.getItem('email')
   var phone = window.localStorage.getItem('phone')
@@ -118,5 +121,5 @@ function chose(id) {
 }
 
 function closeBox() {
-  $('.coverBox').css('display','none')
+  $('.coverBox').css('display', 'none')
 }

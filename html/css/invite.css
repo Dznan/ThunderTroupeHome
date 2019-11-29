@@ -87,7 +87,22 @@ body{
     outline: none;
     padding: 0 1rem;
 }
+.mid .btnGroup{
+    align-items: center;
+    justify-content: center;
+}
+.mid .inputBox .unActive{
+    height: 3rem;
+    width: 10rem;
+    margin-top: 2.5rem;
+    color: #FFFFFF;
+    background: #4A4C53;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
 .mid .inputBox .submit{
+    display: none;
     height: 3rem;
     width: 10rem;
     margin-top: 2.5rem;

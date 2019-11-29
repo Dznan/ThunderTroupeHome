@@ -16,7 +16,8 @@
 <body>
 <header class="header flex">
     <div class="leftPart">
-        <a href="../index.html" data-i18n-text="thundertroupe"></a>
+        <a href="/"><img class="troupeIcon" src="../src/icon.png"></a>
+        <a class="troupeName" href="/" data-i18n-text="thundertroupe"></a>
     </div>
     <div class="rightPart">
         <a href="./show.html" data-i18n-text="signUp"></a>
@@ -60,7 +61,12 @@
                 <p><span data-i18n-text="enrollPhone"></span></p>
                 <input id="phone" />
             </div>
-            <button class="submit" onclick="submit()" data-i18n-text="enrollSubmit"></button>
+
+            <div class="flex btnGroup">
+                <button class="unActive" data-i18n-text="enrollUnavailable"></button>
+                <button class="submit" onclick="submit()" data-i18n-text="enrollSubmit"></button>
+            </div>
+            <!-- <button class="submit" onclick="submit()" data-i18n-text="enrollSubmit"></button> -->
         </div>
     </div>
 </section>

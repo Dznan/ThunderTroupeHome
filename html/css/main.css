@@ -73,7 +73,17 @@ a:active{text-decoration:none; cursor:pointer}
 a:hover{text-decoration:none; cursor:pointer;color: #2B86F6}
 
 .header .leftPart{
-    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+}
+.header .leftPart .troupeIcon{
+    height: 10%;
+    max-height: 54px;
+}
+.header .leftPart .troupeName{
+    margin-left: 16px;
+    font-size: 1.55rem;
+    white-space: nowrap;
 }
 .header .rightPart{
     font-size: 1.1rem;
