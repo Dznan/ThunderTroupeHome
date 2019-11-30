@@ -20,9 +20,11 @@ body{
     background: url("../src/bg.jpg");
     background-size: cover;
     overflow: auto;
+    background-attachment: fixed;
 }
 .flex{
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: space-between;
 }
