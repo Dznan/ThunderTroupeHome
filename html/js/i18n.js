@@ -21,11 +21,15 @@ function choseLan(lan) {
   console.log(lan)
   window.localStorage.setItem('thunderLan',lan)
   if(lan === 'en'){
-    $(".cn").css('display','inline-block')
-    $(".en").css('display','none')
+    $(".list.cn").css('display','inline-block')
+    $(".drop.cn").css('display','block')
+    $(".list.en").css('display','none')
+    $(".drop.en").css('display','none')
   }else{
-    $(".en").css('display','inline-block')
-    $(".cn").css('display','none')
+    $(".list.en").css('display','inline-block')
+    $(".drop.en").css('display','block')
+    $(".list.cn").css('display','none')
+    $(".drop.cn").css('display','none')
   }
   i18nCtrl(lan)
 }

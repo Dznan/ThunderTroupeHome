@@ -10,7 +10,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-153873347-1');
     </script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -29,16 +28,32 @@
         <a class="troupeName" href="/" data-i18n-text="thundertroupe"></a>
     </div>
     <div class="rightPart">
-        <a href="./show.html" data-i18n-text="signUp"></a>
-        <span>|</span>
-        <a href="./invite.html" data-i18n-text="volunteer"></a>
-        <span>|</span>
-        <a class="en" onclick="choseLan('en')">English</a>
-        <a class="cn" onclick="choseLan('zh')">中文</a>
+        <div class="dropDown">
+            <button class="dropButton"><img src="../src/menu.png"></button>
+            <div class="dropDownContent">
+                <a href="show.html" data-i18n-text="signUp"></a>
+                <a href="invite.html" data-i18n-text="volunteer"></a>
+                <a class="drop en" onclick="choseLan('en')">English</a>
+                <a class="drop cn" onclick="choseLan('zh')">中文</a>
+            </div>
+        </div>
+        <div class="listMenu">
+            <a href="./show.html" data-i18n-text="signUp"></a>
+            <span>|</span>
+            <a href="./invite.html" data-i18n-text="volunteer"></a>
+            <span>|</span>
+            <a class="list en" onclick="choseLan('en')">English</a>
+            <a class="list cn" onclick="choseLan('zh')">中文</a>
+        </div>
     </div>
 </header>
 <section class="mid flex">
     <!-- <img class="banner" src="../src/banner3.jpg" /> -->
+    <div class="videoBanner" poster="../src/video_poster.png">
+        <video controls webkit-playsinline>
+            <source src="../src/intro_video.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <div class="introContent">
         <p class="title" data-i18n-text="showtime"></p>
@@ -53,11 +68,11 @@
                     </div>
                     <div class="introItem address">
                         <i class="far fa-clock"></i>
-                        <p><a href="https://www.junction.co.uk">Cambridge Junction J2</a><br>Clifton Way, Cambridge, CB1 7GX</p>
+                        <p><a href="https://www.junction.co.uk/">Cambridge Junction J2</a><br>Clifton Way, Cambridge, CB1 7GX</p>
                     </div>
                 </div>
                 <div class="flex btnGroup plays1">
-                    <button class="active" onclick="chose(1)" data-i18n-text="enroll"></button>
+                    <div><a class="button active" href="https://junction.co.uk/the-thunder-troupe/" target="_blank" data-i18n-text="enroll"></a></div>
                     <button class="unActive" data-i18n-text="enrolled"></button>
                 </div>
             </div>
@@ -72,37 +87,14 @@
                     </div>
                     <div class="introItem address">
                         <i class="far fa-clock"></i>
-                        <p><a href="https://www.canadawatertheatre.org.uk">Canada Water Theatre</a><br>21 Surrey Quays Road, London, SE16 7AR</p>
+                        <p><a href="https://www.canadawatertheatre.org.uk/">Canada Water Theatre</a><br>21 Surrey Quays Road, London, SE16 7AR</p>
                     </div>
                 </div>
                 <div class="flex btnGroup plays2">
-                    <button class="active" onclick="chose(2)" data-i18n-text="enroll"></button>
+                    <div><a class="button active" href="https://canadawatertheatre.org.uk/2460/The-Light-in-Your-Heart-and-the-Way-Back-Home" target="_blank" data-i18n-text="enroll"></a></div>
                     <button class="unActive" data-i18n-text="enrolled"></button>
                 </div>
 
-            </div>
-        </div>
-        <div class="coverBox">
-            <div class="center">
-                <div class="coverItem">
-                    <div class="itemTitle">
-                        <span class="titleContent"></span>
-                    </div>
-                    <div class="ItemContent">
-                        <p><span data-i18n-text="enrollName"></span> <span class="red">*</span></p>
-                        <input id="signName" type="text"/>
-                    </div>
-                    <div class="ItemContent">
-                        <p><span data-i18n-text="enrollPhone"></span> <span class="red">*</span></p>
-                        <input id="signPhone" type="tel"/>
-                    </div>
-                    <div class="ItemContent">
-                        <p><span data-i18n-text="enrollEmail"></span> <span class="red">*</span></p>
-                        <input id="signMail" type="email"/>
-                    </div>
-                    <button class="submit" onclick="sign()" data-i18n-text="enrollSubmit"></button>
-                </div>
-                <i class="close" onclick="closeBox()"></i>
             </div>
         </div>
     </div>

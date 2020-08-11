@@ -22,7 +22,17 @@
     width: 26px;
     height: 23px;
 }
-
+.mid {
+    width: 100%;
+}
+.mid .videoBanner {
+    margin-top: 10px;
+    width: 75%;
+    max-width: 1080;
+}
+.mid .videoBanner video{
+    width: 100%;
+}
 .mid .introContent .showItem{
     width: 100%;
     padding: 0 25%;
@@ -51,6 +61,18 @@
     border: none;
     font-size: 1.1rem;
     cursor: pointer;
+}
+.mid .introContent .showItem .ItemIntro .button{
+    width: 10rem;
+    min-width: 10rem;
+    height: 4rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: centers;
 }
 .mid .introContent .showItem .ItemIntro .btnGroup{
     align-items: center;
@@ -156,7 +178,15 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
+    .mid .videoBanner {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 1080;
+    }
+    .mid .videoBanner video{
+        width: 100%;
+    }
     .mid .introContent .showItem{
         padding: 0 1rem;
         margin-top: 3rem;

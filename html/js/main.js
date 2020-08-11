@@ -66,8 +66,8 @@ function setLocal(reqData) {
 
 //初始化报名状态
 function initData() {
-  window.localStorage.setItem('play1', 1);
-  window.localStorage.setItem('play2', 1);
+  window.localStorage.setItem('play1', 0);
+  window.localStorage.setItem('play2', 0);
   // window.localStorage.setItem('play3', 0);
   var play1 = window.localStorage.getItem('play1')
   var play2 = window.localStorage.getItem('play2')
