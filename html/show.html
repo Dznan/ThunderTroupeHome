@@ -2,24 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title data-i18n-text="getTickets"></title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153873347-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'UA-153873347-1');
     </script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" language="JavaScript" src="../js/jquery.i18n.properties.js"></script>
+    <script type="text/javascript" src="../js/jquery.i18n.properties.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/introduce.css">
     <link rel="stylesheet" href="../css/show.css">
+    <script type="text/javascript">
+        function openQrCode(id) {
+            const qrcode = document.getElementById(id);
+            qrcode.style.visibility = 'visible';
+        }
+
+        function hideQrCode(id) {
+            const qrcode = document.getElementById(id);
+            qrcode.style.visibility = '';
+        }
+    </script>
+    <style>
+        .qrcode-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            visibility: hidden;
+        }
+
+        .qrcode {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            box-shadow: 0 0 32px -12px #888;
+        }
+    </style>
 </head>
 <body>
 <header class="header flex">
@@ -64,15 +99,22 @@
                 <div class="intro">
                     <div class="introItem time">
                         <i class="far fa-clock"></i>
-                        <p>14:30, 12<sup>th</sup> Jan, 2020</p>
+                        <p>19:00, 28 Jan, 2024</p>
                     </div>
                     <div class="introItem address">
                         <i class="far fa-clock"></i>
-                        <p><a href="https://www.junction.co.uk/">Cambridge Junction J2</a><br>Clifton Way, Cambridge, CB1 7GX</p>
+                        <p><a href="https://www.rayefreedmanarts.co.nz/" target="_blank" style="font-weight: bold;">Raye
+                            Freedman Arts Centre</a>
+                            <br>
+                            Silver Road, Newmarket, Auckland 1023, New Zealand
+                        </p>
                     </div>
                 </div>
                 <div class="flex btnGroup plays1">
-                    <div><a class="button active" href="https://junction.co.uk/the-thunder-troupe/" target="_blank" data-i18n-text="enroll"></a></div>
+                    <button class="button active"
+                            data-i18n-text="enroll"
+                            onclick="openQrCode('auckland-qrcode')"
+                    ></button>
                     <button class="unActive" data-i18n-text="enrolled"></button>
                 </div>
             </div>
@@ -83,15 +125,23 @@
                 <div class="intro">
                     <div class="introItem time">
                         <i class="far fa-clock"></i>
-                        <p>19:30, 17<sup>th</sup> Jan, 2020</p>
+                        <p>19:00, 3 Feb, 2024</p>
                     </div>
                     <div class="introItem address">
                         <i class="far fa-clock"></i>
-                        <p><a href="https://www.canadawatertheatre.org.uk/">Canada Water Theatre</a><br>21 Surrey Quays Road, London, SE16 7AR</p>
+                        <p><a href="https://www.actorscentreaustralia.com.au/" target="_blank"
+                              style="font-weight: bold">Actors Centre Australia</a>
+                            <br>
+                            3 Norton Street, Italian Forum, Shop 30 A Italian Forum Performance Precinct, Leichhardt NSW
+                            2040, Australia
+                        </p>
                     </div>
                 </div>
                 <div class="flex btnGroup plays2">
-                    <div><a class="button active" href="https://canadawatertheatre.org.uk/2460/The-Light-in-Your-Heart-and-the-Way-Back-Home" target="_blank" data-i18n-text="enroll"></a></div>
+                    <button class="button active"
+                            data-i18n-text="enroll"
+                            onclick="openQrCode('sydney-qrcode')"
+                    ></button>
                     <button class="unActive" data-i18n-text="enrolled"></button>
                 </div>
 
@@ -100,8 +150,15 @@
     </div>
 </section>
 <footer class="footer flex enFont">
-    <p><span data-i18n-text="contact"></span>  |  <span class="enFont"><a href="mailto:thundertroupe@gmail.com">thundertroupe@gmail.com</a></span></p>
-    <p><span class="enFont">Copyright</span>  ©<span data-i18n-text="thundertroupe"></span></p>
+    <p><span data-i18n-text="contact"></span> | <span class="enFont"><a href="mailto:thundertroupe@gmail.com">thundertroupe@gmail.com</a></span>
+    </p>
+    <p><span class="enFont">Copyright</span> ©<span data-i18n-text="thundertroupe"></span></p>
 </footer>
+<div class="qrcode-background" id="auckland-qrcode" onclick="hideQrCode('auckland-qrcode')">
+    <img class="qrcode" src="../src/auckland-qrcode.jpg">
+</div>
+<div class="qrcode-background" id="sydney-qrcode" onclick="hideQrCode('sydney-qrcode')">
+    <img class="qrcode" src="../src/sydney-qrcode.jpg">
+</div>
 </body>
 </html>
